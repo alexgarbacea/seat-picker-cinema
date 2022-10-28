@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/alexgarbacea.github.io/seat-picker-cinema/static/css/main.01442e2c.css",
-    "main.js": "/alexgarbacea.github.io/seat-picker-cinema/static/js/main.b6513ac5.js",
+    "main.js": "/alexgarbacea.github.io/seat-picker-cinema/static/js/main.f450f55a.js",
     "index.html": "/alexgarbacea.github.io/seat-picker-cinema/index.html",
     "main.01442e2c.css.map": "/alexgarbacea.github.io/seat-picker-cinema/static/css/main.01442e2c.css.map",
-    "main.b6513ac5.js.map": "/alexgarbacea.github.io/seat-picker-cinema/static/js/main.b6513ac5.js.map"
+    "main.f450f55a.js.map": "/alexgarbacea.github.io/seat-picker-cinema/static/js/main.f450f55a.js.map"
   },
   "entrypoints": [
     "static/css/main.01442e2c.css",
-    "static/js/main.b6513ac5.js"
+    "static/js/main.f450f55a.js"
   ]
 }
