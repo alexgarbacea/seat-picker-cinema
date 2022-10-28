@@ -17,9 +17,9 @@ const App = () => {
 
   return (
     <main className="App">
-      {page == '' && <MainMenu switchPage = { switchPage } />}
+      {page === '' && <MainMenu switchPage = { switchPage } />}
       {
-        page == 'seat-picker' && 
+        page === 'seat-picker' && 
         <SeatPicker 
           save = { addTakenSeats } 
           switchPage = { switchPage }
