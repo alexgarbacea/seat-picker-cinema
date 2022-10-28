@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --cell-size: 2em;
+  --bg-color: #00A0E3;
+  --bg-contrast-color: #fff;
+  --bg-contrast-color-taint: rgb(237, 237, 237);
+
+  --default-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  --default-border-radius: 15px;
+
+  --default-seat-color: #707070;
+  --selected-seat-color: #00AEEF;
+  --disabled-seat-color: #E7E8EF;
+
+  --button-color: #0DB1EE;
+  --button-border-color: #B4B6C5;
+  --button-border-radius: 8px;
+  --button-width: 15em;
+
+  --main-font-color: #555555;
+  --white-font-color: var(--bg-contrast-color);
+  --blue-font-color: #00A0E3;
+
+  --medium-font-size: 1em;
+  --small-font-size: .8em;
+  --large-font-size: 1.5em;
+
+  --main-transition: .15s ease-in-out;
+
+  --header-color: #9EA8B2;
+  --seq-color: #E7E8EF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--main-font-color);
+  font-weight: 500;
+  font-size: var(--medium-font-size);
 }
+
+

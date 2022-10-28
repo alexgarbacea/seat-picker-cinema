@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+.f-col {
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.w-big {
+  width: 60%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blue-font {
+  color: var(--blue-font-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.big-text {
+  font-size: var(--large-font-size);
+}
+
+.center-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-block: 5em;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5em;
+  box-shadow: var(--default-box-shadow);
+  border-radius: var(--default-border-radius);
+  background-color: var(--bg-contrast-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-main, .btn-secondary {
+  text-align: center;
+  padding: .7em;
+  width: var(--button-width);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  user-select: none;
+  transition: var(--main-transition);
+  margin-block: .5em;
+}
+
+.btn-main {
+  background-color: var(--button-color);
+  color: var(--white-font-color);
+}
+
+.btn-main:hover {
+  translate: 0 -.15em;
+  transition: var(--main-transition);
+}
+
+.btn-secondary {
+  background-color: var(--bg-contrast-color);
+  color: var(--main-font-color);
+  border: 1px solid var(--button-border-color);
+}
+
+.btn-secondary:hover {
+  transition: var(--main-transition);
+  background-color: var(--bg-contrast-color-taint);
+}
+
+.movie-badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.movie-badges > * {
+  padding: .5em;
+  border-radius: var(--button-border-radius);
+  border: 1.5px solid var(--button-border-color);
+  cursor: pointer;
+  user-select: all;
+  font-weight: 600;
+}
+
+.picker-wrapper {
+  margin-block: 3em;
+  width: 80%;
+  text-align: center;
+}
+
+.picker-display {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  overflow: auto;
+}
+
+.picker-screen {
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(180deg, var(--button-border-color) 0%, rgba(156, 156, 156, 0) 100%);
+
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  border: 7px solid var(--button-border-color);
+  border-bottom: 0;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.seat-wrapper {
+  overflow: auto;
+  min-width: max-content;
+}
+
+.row {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: var(--default-seat-color);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  user-select: none;
+}
+
+.row:hover {
+  background-color: var(--selected-seat-color);
+}
+
+.row.disabled {
+  background-color: var(--disabled-seat-color);
+  cursor: not-allowed;
+}
+
+.row.selected {
+  background-color: var(--selected-seat-color);
+}
+
+.ticket-view {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.ticket-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: .7em;
+  color: var(--blue-font-color);
+  font-weight: 600;
+}
+
+.ticket-table {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  overflow: auto;
+  max-height: 25em;
+  margin-bottom: 3em;
+}
+
+.ticket-table > h3 {
+  background-color: var(--header-color);
+  color: var(--white-font-color);
+  padding-block: 1em;
+  border-radius: var(--button-border-radius) var(--button-border-radius) 0 0;
+  margin-bottom: 0;
+}
+
+.ticket-table > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: .4em;
+}
+
+.ticket-table > div:nth-child(2) {
+  position: sticky;
+  top: 0;
+}
+
+.ticket-table > div:nth-child(even) {
+  background-color: var(--seq-color);
+}
+
+.ticket-table > div:nth-child(odd) {
+  background-color: var(--bg-contrast-color);
+}
+
+
+.ticket-footer {
+  font-size: var(--large-font-size);
+  padding-inline: 3em;
+  position: sticky;
+  bottom: 0;
+  border-radius: 0 0 var(--button-border-radius) var(--button-border-radius);
+}
+
+.seat-pick-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: .5em;
+  flex-wrap: wrap;
 }

@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import MainMenu from './Components/MainMenu';
+import SeatPicker from './Components/SeatPicker';
 
-function App() {
+const App = () => {
+  // Used for demo purposes to save selected seats in session
+  const [takenSeats, setTakenSeats] = useState([])
+
+  const [page, setPage] = useState('');
+
+  const switchPage = (newPage) => setPage(newPage);
+
+  const addTakenSeats = (arr) => {
+    setTakenSeats(prev => ([...prev, ...arr]))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      {page == '' && <MainMenu switchPage = { switchPage } />}
+      {
+        page == 'seat-picker' && 
+        <SeatPicker 
+          save = { addTakenSeats } 
+          switchPage = { switchPage }
+          checker = {takenSeats}
+          />
+      }
+    </main>
   );
 }
 
